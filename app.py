@@ -46,6 +46,16 @@ def contact_us():
         )
 
 
+@app.route('/contacts')
+def contacts():
+    return render_template(
+        'contacts.html',
+        title='Contacts',
+        contacts=session.query(ContactUs),
+        current_year=datetime.today().year
+    )
+
+
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True

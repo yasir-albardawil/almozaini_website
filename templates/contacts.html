@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Country</th>
+    </tr>
+
+    {% for contact in contacts %}
+        <tr>
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.title }}</td>
+            <td>{{ contact.message }}</td>
+        </tr>{% endfor %}
+</table>
+</body>
+</html>
