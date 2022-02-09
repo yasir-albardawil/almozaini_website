@@ -18,7 +18,7 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
     email = Column(String(250), nullable=False)
-    picture = Column(String(250))
+    phone_number = Column(String(250), nullable=False)
 
 
 class Organization(Base):
@@ -30,12 +30,13 @@ class Organization(Base):
     phone_number = Column(String(250), nullable=False)
 
 
-class News(Base):
-    __tablename__ = 'news'
+class ContactUs(Base):
+    __tablename__ = 'contact_us'
 
     id = Column(Integer, primary_key=True)
+    name = Column(String(250), nullable=False)
     title = Column(String(250), nullable=False)
-    body = Column(String(250), nullable=False)
+    message = Column(String(250), nullable=False)
 
 
 engine = create_engine('sqlite:///almozaini_website.db')
